@@ -8,8 +8,8 @@ from .models import Student, Path
 #  number = serializers.IntegerField(required=False)
 
 class PathSerializer(serializers.ModelSerializer):
- # students = serializers.PrimaryKeyRelatedField(read_only=True, many = True)
- students =  serializers.HyperlinkedIdentityField(view_name='detail', format='html', many=True, read_only=True)
+ students = serializers.PrimaryKeyRelatedField(read_only=True, many = True)
+ # students =  serializers.HyperlinkedIdentityField(view_name='detail', format='html', many=True, read_only=True)
  class Meta:
   model = Path
   fields = '__all__'

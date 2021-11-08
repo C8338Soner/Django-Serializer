@@ -11,7 +11,7 @@ from rest_framework import status
 
 
 def home(request):
-    return HttpResponse('<h1>API Page</h1>')
+    return render(request,'index.html')
 
 @api_view(['GET', 'POST'])
 def student_api(request):
